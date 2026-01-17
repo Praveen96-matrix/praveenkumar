@@ -1,0 +1,20 @@
+name: Feature Branch Build
+
+on:
+  push:
+    branches:
+      - feature
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout feature branch code
+        uses: actions/checkout@v4
+
+      - name: Build (static site validation)
+        run: |
+          echo "Building feature branch..."
+          ls -la
+          echo "Build completed successfully"

@@ -16,11 +16,46 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-attachment: fixed; /* live / parallax effect */
+      background-attachment: fixed;
+      overflow: hidden;
+    }
+
+    /* Marquee text */
+    .marquee {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .marquee span {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ffffff;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      animation: scroll 12s linear infinite;
+      padding-left: 100%;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
     }
   </style>
 </head>
 
 <body>
+
+<div class="marquee">
+  <span>PRAVEEN KUMAR N</span>
+</div>
+
 </body>
 </html>
